@@ -29,7 +29,9 @@ div#nav-content {
 	margin: 0 auto;
 }
 
-
+div.navbar-header {
+	width: 480px;
+}
 
 div.navbar-header>a {
 	padding: 12px;
@@ -119,6 +121,20 @@ div#and-more {
 	font-size: 17px;
 	font-weight: bold;
 }
+
+
+/********** how to use **********/
+
+div#howtouse {
+	margin-bottom: 50px;
+}
+
+div#howtouse h2 {
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
 
 /********** updates **********/
 

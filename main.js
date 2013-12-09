@@ -2,6 +2,6 @@ console.log("Thank you for coming here!");
 
 $(document).ready( function() {
     $("#dl-btn").click(function(){
-        window.location.href = "package/iOSzip.zip";
+        window.location.href = "package/iOS.zip";
     });
 });
