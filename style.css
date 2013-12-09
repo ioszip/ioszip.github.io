@@ -1,0 +1,147 @@
+@import url(http://fonts.googleapis.com/css?family=Electrolize);
+
+/*-------- general --------*/
+body {
+	margin:0;
+	background-color: #f6f6f6;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+hr {
+	border-color: #ccc;
+}
+
+
+/*-------- navbar --------*/
+
+nav {
+	opacity: 0.8;
+}
+
+div#nav-content {
+	width: 870px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+
+
+div.navbar-header>a {
+	padding: 12px;
+	font-size: 20px;
+	font-family: Electrolize;
+}
+
+div#nav-content .navbar-nav>li>a {
+	padding: 12px 15px;
+}
+
+nav.navbar, nav.navbar-default {
+	min-height: 44px;
+	height: 44px;
+}
+
+div.navbar-sub {
+	color: #777;
+	width: 600px;
+	padding-left: 15px;
+	padding: 12px 0;
+	font-family: Electrolize;
+}
+
+div.navbar-sub a {
+	color: #777;
+	text-decoration: none;
+}
+
+/********** sns **********/
+#sns {
+	padding: 12px 0 12px 12px;
+}
+
+iframe.twitter-share-button {
+	margin-left: 15px;
+	width: 105px!important;
+}
+
+/********** wrapper **********/
+#wrapper {
+	width: 870px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 90px;
+}
+
+
+/********** title **********/
+div#title {
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+div#title h1 {
+	font-size: 80px;
+	margin-bottom: 20px;
+	font-family: Electrolize;
+}
+
+div#title h2 {
+	margin-bottom: 55px;
+	font-size: 19px;
+	line-height: 1.4;
+}
+
+button.btn-biggest {
+	font-size: 22px;
+	padding: 12px 35px;
+	margin-bottom: 50px;
+}
+
+
+/********** content **********/
+div#content {
+	margin-bottom: 50px;
+}
+
+div#content h2 {
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+div#and-more {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+/********** updates **********/
+
+div#update {
+	margin-bottom: 40px;
+}
+
+div#update h2 {
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+ul#update-history {
+	margin-bottom: 60px;
+}
+
+
+/********** footer **********/
+
+footer {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
