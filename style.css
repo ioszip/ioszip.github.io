@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Electrolize);
 
 /*-------- general --------*/
+
 body {
 	margin:0;
 	background-color: #f6f6f6;
@@ -61,7 +62,9 @@ div.navbar-sub a {
 	text-decoration: none;
 }
 
-/********** sns **********/
+
+/*-------- sns --------*/
+
 #sns {
 	padding: 12px 0 12px 12px;
 }
@@ -71,7 +74,9 @@ iframe.twitter-share-button {
 	width: 105px!important;
 }
 
-/********** wrapper **********/
+
+/*-------- wrapper --------*/
+
 #wrapper {
 	width: 870px;
 	margin: 0 auto;
@@ -80,7 +85,8 @@ iframe.twitter-share-button {
 }
 
 
-/********** title **********/
+/*-------- title --------*/
+
 div#title {
 	width: 100%;
 	margin-top: 50px;
@@ -106,7 +112,8 @@ button.btn-biggest {
 }
 
 
-/********** content **********/
+/*-------- content --------*/
+
 div#content {
 	margin-bottom: 50px;
 }
@@ -118,25 +125,11 @@ div#content h2 {
 }
 
 div#and-more {
-	font-size: 17px;
-	font-weight: bold;
+	font-size: 16px;
 }
 
 
-/********** how to use **********/
-
-div#howtouse {
-	margin-bottom: 50px;
-}
-
-div#howtouse h2 {
-	font-size: 40px;
-	font-weight: bold;
-	margin-bottom: 50px;
-}
-
-
-/********** updates **********/
+/*-------- updates --------*/
 
 div#update {
 	margin-bottom: 40px;
@@ -153,11 +146,12 @@ ul#update-history {
 }
 
 
-/********** footer **********/
+/*-------- footer --------*/
 
 footer {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	text-align: center;
+	line-height: 1.7;
 }
 
