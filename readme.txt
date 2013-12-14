@@ -1,6 +1,8 @@
 iOS.zip - download imgs for app store
 
-v1.0.0
+v1.1.0
+
+This is <<iPhone>> package.
 
 ---------- icon size list ----------
 
