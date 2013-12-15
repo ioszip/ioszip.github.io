@@ -9,10 +9,6 @@ $(document).ready( function() {
     	window.location.href ="package/iOS_iPad.zip";
     })
 
-    // $("div#upload-box").dropzone({ url: "uploadFile.php" });
-
-    //
-
     var myDropzone = new Dropzone("div#upload-box", {
 		url: "uploadFile.php",
 		parallelUploads: 1,
@@ -20,18 +16,22 @@ $(document).ready( function() {
 		maxFilesize: 0.5,
 	});
 
-	myDropzone.options.previewTemplate = '<div class="preview file-preview">  <div class="details"></div> <div class="filename"><span></span></div> <div class="progress"><span class="load"></span><span class="upload"></span></div>  <div class="error-message"><span></span></div>  <div class="color"></div></div>'
+	myDropzone.options.previewTemplate = '<div class="preview file-preview"> 
+	 <div class="details"></div> <div class="filename"><span></span></div> 
+	 <div class="progress"><span class="load"></span><span class="upload"></span></div> 
+	  <div class="error-message"><span></span></div>  <div class="color"></div></div>';
 
    	// finishe file upload
-	myDropzone.on("success", function(file,　text) { // (送信したファイルの情報,カラーコードのJSONデータ)
-		console.log("success!");
+	myDropzone.on("success", function(file,　text) {
 		
 		// parse json				
 		var res = JSON.parse(text);
 		if (res["status"] == "success") {
+			// download iOS.zip
 			window.location.href = res["zipurl"];
 		}
 		else {
+			// show error message
 			alert(res["message"]);
 		}
 	});
