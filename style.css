@@ -120,6 +120,11 @@ button#dl-btn-pad {
 	margin-bottom: 40px;
 }
 
+div#upload-box {
+	width: 200px;
+	height: 200px;
+	background-color: #ccc;
+}
 
 /*-------- content --------*/
 
