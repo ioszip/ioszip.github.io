@@ -109,15 +109,7 @@ button.btn-biggest {
 	font-size: 22px;
 	padding: 12px 0;
 	width: 280px;
-	/*margin-bottom: 50px;*/
-}
-
-button#dl-btn {
-	margin-bottom: 15px;
-}
-
-button#dl-btn-pad {
-	margin-bottom: 40px;
+	margin-bottom: 50px;
 }
 
 
