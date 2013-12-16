@@ -105,18 +105,51 @@ div#title h2 {
 	line-height: 1.4;
 }
 
-button.btn-biggest {
-	font-size: 22px;
-	padding: 12px 0;
-	width: 280px;
+div#download-control {
 	margin-bottom: 50px;
 }
 
-div#upload-box {
-	width: 200px;
-	height: 200px;
-	background-color: #ccc;
+button.btn-biggest {
+	font-size: 22px;
+	font-family: Electrolize;
+	padding: 12px 0;
+	width: 280px;
+	margin-top:40px;
+	margin-left:110px;
 }
+
+p.big {
+	font-size: 25px;
+	font-family: Electrolize;
+	color: #666;
+	margin-top:52px;
+	margin-left:108px;
+}
+
+div#upload-box {
+	background-color: #efefef;
+	border: 3px dotted #ccc;
+
+	color: #bbb;
+	font-size: 20px;
+	font-family: Electrolize;
+	padding: 30px 40px;
+	margin-top: 8px;
+	margin-left: 10px;
+	margin-right: 80px;
+	
+	border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px; 
+
+    cursor: pointer;
+}
+
+div#upload-box:hover, div#upload-box.dz-drag-hover{
+	color: #999;
+	border-color: #aaa;
+}
+
 
 /*-------- content --------*/
 

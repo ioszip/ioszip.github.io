@@ -16,10 +16,7 @@ $(document).ready( function() {
 		maxFilesize: 0.5,
 	});
 
-	myDropzone.options.previewTemplate = '<div class="preview file-preview"> 
-	 <div class="details"></div> <div class="filename"><span></span></div> 
-	 <div class="progress"><span class="load"></span><span class="upload"></span></div> 
-	  <div class="error-message"><span></span></div>  <div class="color"></div></div>';
+	myDropzone.options.previewTemplate = '<div class="preview file-preview"> <div class="details"></div> <div class="filename"><span></span></div>  <div class="error-message"><span></span></div>  <div class="color"></div></div>';
 
    	// finishe file upload
 	myDropzone.on("success", function(file,　text) {

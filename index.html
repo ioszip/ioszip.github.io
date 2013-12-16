@@ -10,6 +10,7 @@
 <link rel="shortcut icon" href="img/favicon.png">
 <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="lib/bootstrap/css/non-responsive.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -68,21 +69,34 @@
 		<div id="title">
 			<h1>iOS.zip</h1>
 			<h2>iOSアプリ申請に必要な画像セットを<br>1clickでまとめてダウンロード</h2>
-			<button id="dl-btn" type="button" class="btn btn-primary btn-biggest">Download for iOS</button>
+
+			<div id="download-control" class="row">
+				<div class="col-xs-4">
+					<button id="dl-btn" type="button" class="btn btn-primary btn-biggest">Download iOS.zip</button>
+				</div>
+
+				<div class="col-xs-2">
+					<p class="big">OR</p>
+				</div>
+
+				<div class="col-xs-6">
+					<div id="upload-box">
+						Drag your 1024x1024.png<br> to This Area
+					</div>
+				</div>
+			</div>
 
 			<p>申請に必要なファイルのサイズが知りたい時、<br>とりあえずiTunes Connectにアプリを登録したい時に。</p>
+			<p><b><span class="label label-danger">NEW</span>
+				1024pxアイコンから切り出す機能を追加しました</b></p>
 			<hr>
 		</div>
-
-		<form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
-
-		<div id="upload-box"></div>
 		
 		<div id="content">
 			<h2>files in iOS.zip</h2>
 			<div class="row">
 			    <!-- content1 -->
-			  	<div class="col-sm-6 col-md-4">
+			  	<div class="col-xs-4">
 			    	<div class="thumbnail">
 			    	  	<img src="img/640x1136.png">
 			      		<div class="caption">
@@ -93,7 +107,7 @@
 			  	<!-- /content1 -->
 
 				<!-- content2 -->
-			  	<div class="col-sm-6 col-md-4">
+			  	<div class="col-xs-4">
 			    	<div class="thumbnail">
 			    	  	<img src="img/640x960.png">
 			      		<div class="caption">
@@ -104,7 +118,7 @@
 			  	<!-- /content2 -->
 
 			  	<!-- content3 -->
-			  	<div class="col-sm-6 col-md-4">
+			  	<div class="col-xs-4">
 			   		<div class="thumbnail">
 			      		<img src="img/120x120.png">
 			      		<div class="caption">
@@ -131,9 +145,10 @@
 		<div id="update">
 			<h2>Updates</h2>
 			<ul id="update-history">
-				<li>2013/12/15　ダウンロードボタンを統合</li>
-				<li>2013/12/14　iPadサイズに対応</li>
-			    <li>2013/12/10　サイト公開</li>
+				<li>2013/12/16 1024pxアイコンから切り出すを追加</li>
+				<li>2013/12/15 ダウンロードボタンを統合</li>
+				<li>2013/12/14 iPadサイズに対応</li>
+			    <li>2013/12/10 サイトを公開しました</li>
 			</ul>
 			<hr>
 		</div>

@@ -10,36 +10,78 @@ if ($_FILES["file"]["size"] === 0) {
         'status' => 'error',
         'message' => 'upload error'
     );
-    echo json_encode($json); // 配列をJSON形式に変換してくれる
+    echo json_encode($json);
     exit();
 }
 else {
 	// can save?
 	if (is_img($tmpfile)) {
-        // dirを切る(use hash)
+        // create dir
         $dirname = hash_file('md5', $_FILES['file']['tmp_name']);
         $dirname = $dirname.time();
 
         // make dir
         mkdir("./tmp/{$dirname}");
-        mkdir("./tmp/{$dirname}/Common");
-        mkdir("./tmp/{$dirname}/iOS 7");
-        mkdir("./tmp/{$dirname}/iOS 6");
+        mkdir("./tmp/{$dirname}/iPhone");
+        mkdir("./tmp/{$dirname}/iPad");
+
+        /////////////////////////////////////////////////////////
+        // for iPhone icon
+        mkdir("./tmp/{$dirname}/iPhone/Common");
+        mkdir("./tmp/{$dirname}/iPhone/iOS 7");
+        mkdir("./tmp/{$dirname}/iPhone/iOS 6");
 
         // save require size
         // Common
-        saveResizeImage(1024, 1024, $dirname, "Common");
+        saveResizeImage(1024, 1024, $dirname, "iPhone/Common");
+        copyFile("640x1136.png", $dirname, "iPhone/Common");
+        copyFile("640x960.png", $dirname, "iPhone/Common");
+        copyFile("320x480.png", $dirname, "iPhone/Common");
 
         // for iOS 7
-        saveResizeImage(140, 140, $dirname, "iOS 7");
-        saveResizeImage(80, 80, $dirname, "iOS 7");
-        saveResizeImage(58, 58, $dirname, "iOS 7");
+        saveResizeImage(140, 140, $dirname, "iPhone/iOS 7");
+        saveResizeImage(80, 80, $dirname, "iPhone/iOS 7");
+        saveResizeImage(58, 58, $dirname, "iPhone/iOS 7");
 
         // for iOS 6
-        saveResizeImage(114, 114, $dirname, "iOS 6");
-        saveResizeImage(57, 57, $dirname, "iOS 6");
-        saveResizeImage(58, 58, $dirname, "iOS 6");
-        saveResizeImage(29, 29, $dirname, "iOS 6");
+        saveResizeImage(114, 114, $dirname, "iPhone/iOS 6");
+        saveResizeImage(57, 57, $dirname, "iPhone/iOS 6");
+        saveResizeImage(58, 58, $dirname, "iPhone/iOS 6");
+        saveResizeImage(29, 29, $dirname, "iPhone/iOS 6");
+
+
+        /////////////////////////////////////////////////////////
+        // for iPad icon
+        mkdir("./tmp/{$dirname}/iPad/Common");
+        mkdir("./tmp/{$dirname}/iPad/iOS 7");
+        mkdir("./tmp/{$dirname}/iPad/iOS 6");
+
+        // save require size
+        // Common
+        saveResizeImage(1024, 1024, $dirname, "iPad/Common");
+        copyFile("2048x1496.png", $dirname, "iPad/Common");
+        copyFile("1024x748.png", $dirname, "iPad/Common");
+
+        // for iOS 7
+        saveResizeImage(152, 152, $dirname, "iPad/iOS 7");
+        saveResizeImage(76, 76, $dirname, "iPad/iOS 7");
+        saveResizeImage(80, 80, $dirname, "iPad/iOS 7");
+        saveResizeImage(40, 40, $dirname, "iPad/iOS 7");
+        saveResizeImage(58, 58, $dirname, "iPad/iOS 7");
+        saveResizeImage(29, 29, $dirname, "iPad/iOS 7");
+
+        // for iOS 6
+        saveResizeImage(144, 144, $dirname, "iPad/iOS 6");
+        saveResizeImage(72, 72, $dirname, "iPad/iOS 6");
+        saveResizeImage(100, 100, $dirname, "iPad/iOS 6");
+        saveResizeImage(50, 50, $dirname, "iPad/iOS 6");
+
+
+        /////////////////////////////////////////////////////////
+        // for readme.txt
+        copyFile("readme.txt", $dirname, "./");
+        // TODO: add readme.txt
+
 
         // make zip
         createZip($dirname);
@@ -51,7 +93,7 @@ else {
             'status' => 'success',
     		'zipurl' => "http://ioszip.mashroom.in/tmp/{$dirname}/iOS.zip",
 		);
-		echo json_encode($json); // 配列をJSON形式に変換してくれる
+		echo json_encode($json);
 		exit();
 
 	}
@@ -59,13 +101,13 @@ else {
 
 function createZip($root_dir)
 {
-	//この中にファイルを全部入れておく。サブディレクトリなどあってもOK
+	// resource dir
 	$tempDir = "./tmp/{$root_dir}";
-	//ここにzipファイルを作ります
+	
+    // zip dir
 	$filepath = "./iOS.zip";
-	//このコマンドを
+	
 	$command = 'cd ' . $tempDir . '; zip -r ' . $filepath . ' .';
-	//実行します
 	exec($command);
 }
 
@@ -85,10 +127,16 @@ function saveResizeImage($width, $height, $root_dir, $dir)
         sprintf("./tmp/%s/%s/%sx%s.png", $root_dir, $dir, $width, $height)
         );
 
-    // リソースを解放
+    // release resource
     imagedestroy($src);
     imagedestroy($dst);
 }
+
+function copyFile($src_filename, $root_dir, $dir)
+{
+    copy("./static/{$src_filename}", "./tmp/{$root_dir}/{$dir}/{$src_filename}");
+}
+
 
 // file type is image?
 function is_img($file)
@@ -102,7 +150,7 @@ function is_img($file)
             'status' => 'error',
             'message' => 'file only accept png image file.'
         );
-        echo json_encode($json); // 配列をJSON形式に変換してくれる
+        echo json_encode($json);
         exit();
 
     	return false;
@@ -123,7 +171,7 @@ function is_img($file)
             'status' => 'error',
             'message' => 'file size need 1024 x 1024 pixel.'
         );
-        echo json_encode($json); // 配列をJSON形式に変換してくれる
+        echo json_encode($json);
         exit();
 
     	return false;
