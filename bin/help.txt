@@ -1,0 +1,9 @@
+Hello! Welcome to ioszip!
+Only 1click, you can download imgs for app store!
+
+Usage: ioszip [COMMAND]
+
+COMMAND:
+    open            open ioszip website
+    opengit         open ioszip github #ioszip is a open source tool!
+    download        download zip file

@@ -1,2 +1,9 @@
 #!/bin/sh
+
+if [ $#=0 ]; then
+    cat help.txt
+
+    exit 1 #Failure!
+fi
+
 echo 'ioszip'
