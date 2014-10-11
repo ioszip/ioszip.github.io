@@ -27,6 +27,7 @@ if [ $# -eq 1 ] && [ $1 = 'download' ]; then
     curl --silent -O http://ioszip.mashroom.in/package/iOS.zip
     echo 'done!'
     echo 'Please check iOS.zip file.'
+    open 'http://ioszip.mashroom.in/?referrer=cui_command' # for measurement of effectiveness
     exit 0 #Success!
 fi
 
