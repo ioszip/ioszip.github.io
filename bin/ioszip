@@ -9,7 +9,14 @@ if [ $# -eq 0 ] || [ $1 = '-h' ] || [ $1 = '--help' ]; then
     exit 1 #Failure!
 fi
 
+# Open web site
 if [ $# -eq 1 ] && [ $1 = 'open' ]; then
     open 'http://ioszip.mashroom.in/'
+    exit 0 #Success!
+fi
+
+# Open github page
+if [ $# -eq 1 ] && [ $1 = 'opengit' ]; then
+    open 'https://github.com/ioszip/ioszip.github.io'
     exit 0 #Success!
 fi
