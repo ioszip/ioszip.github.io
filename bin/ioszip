@@ -20,3 +20,11 @@ if [ $# -eq 1 ] && [ $1 = 'opengit' ]; then
     open 'https://github.com/ioszip/ioszip.github.io'
     exit 0 #Success!
 fi
+
+if [ $# -eq 1 ] && [ $1 = 'download' ]; then
+    echo 'download...'
+    curl --silent -O http://ioszip.mashroom.in/package/iOS.zip
+    echo 'done!'
+    echo 'Please check iOS.zip file.'
+    exit 0 #Success!
+fi
