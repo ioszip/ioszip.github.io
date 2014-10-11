@@ -1,8 +1,11 @@
 #!/bin/sh
 
-if [ $#=0 ]; then
+# Show help info when user type below commands.
+# $ ioszip
+# $ ioszip -h
+# $ ioszip -help
+if [ $# -eq 0 ] || [ $1 = '-h' ] || [ $1 = '--help' ]; then
     cat help.txt
-
     exit 1 #Failure!
 fi
 
