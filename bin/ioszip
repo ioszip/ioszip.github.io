@@ -9,4 +9,7 @@ if [ $# -eq 0 ] || [ $1 = '-h' ] || [ $1 = '--help' ]; then
     exit 1 #Failure!
 fi
 
-echo 'ioszip'
+if [ $# -eq 1 ] && [ $1 = 'open' ]; then
+    open 'http://ioszip.mashroom.in/'
+    exit 0 #Success!
+fi
