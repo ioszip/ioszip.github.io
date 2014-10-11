@@ -21,6 +21,7 @@ if [ $# -eq 1 ] && [ $1 = 'opengit' ]; then
     exit 0 #Success!
 fi
 
+# Download iOS.zip file
 if [ $# -eq 1 ] && [ $1 = 'download' ]; then
     echo 'download...'
     curl --silent -O http://ioszip.mashroom.in/package/iOS.zip
@@ -28,3 +29,8 @@ if [ $# -eq 1 ] && [ $1 = 'download' ]; then
     echo 'Please check iOS.zip file.'
     exit 0 #Success!
 fi
+
+# Unknown command!!
+echo "It's unknown command..."
+echo 'Please type "ioszip --help".'
+exit 1 #Failure!
