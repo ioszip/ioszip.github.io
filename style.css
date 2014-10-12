@@ -64,32 +64,18 @@ div.navbar-sub a {
 
 
 /*-------- sns --------*/
-/*
-#sns {
-	padding: 12px 0 12px 12px;
 
-	width: 350px;
-	text-align: center;
-	margin:0 auto 40px;
-	display: -webkit-box;
-	display: -moz-box;
-}
-
-iframe.twitter-share-button {
-	margin-left: 15px;
-	width: 105px!important;
-}
-*/
 #social-badge {
 	width: 350px;
 	text-align: center;
 	padding:12px 0 12px 12px;
+	margin: 0 auto;
 	display: -webkit-box;
 	display: -moz-box;
 }
 
 .tw-share {
-	margin: 0 10px 0 20px;
+	margin: 0 10px 0 10px;
 	width: 100px;
 }
 
