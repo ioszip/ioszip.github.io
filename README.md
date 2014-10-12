@@ -6,26 +6,35 @@ http://ioszip.mashroom.in/
 
 ## You can use in command line.
 
+### Install
+
 The install command is below. Please copy and paste in your terminal app.
 
 ```bash
-$ curl -O https://raw.githubusercontent.com/ioszip/ioszip.github.io/command-line-tool/ioszip.github.io.rb >  /usr/local/Library/Formula/ioszip.github.io.rb; brew install ioszip.github.io
+$ brew tap ioszip/ioszip
+$ brew install ioszip
 ```
 
 So, You can use `ioszip` command.
 
-```
-$ ioszip --help
-```
 
+### Usage
 
-## Usage
 
 ```bash
-$ ioszip [COMMAND]
+$ ioszip download
+```
+
+### Help
+
+```
+$ ioszip --help
+
+ioszip [COMMAND]
 
 COMMAND:
     open            open ioszip website
     opengit         open ioszip github #ioszip is a open source tool!
     download        download zip file
 ```
+
