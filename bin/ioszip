@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# Show help info when user type below commands.
+# $ ioszip
+# $ ioszip -h
+# $ ioszip -help
+if [ $# -eq 0 ] || [ $1 = '-h' ] || [ $1 = '--help' ]; then
+    cat `echo $0 | sed 's/ioszip//'`help.txt
+    exit 1 #Failure!
+fi
+
+# Open web site
+if [ $# -eq 1 ] && [ $1 = 'open' ]; then
+    open 'http://ioszip.mashroom.in/'
+    exit 0 #Success!
+fi
+
+# Open github page
+if [ $# -eq 1 ] && [ $1 = 'opengit' ]; then
+    open 'https://github.com/ioszip/ioszip.github.io'
+    exit 0 #Success!
+fi
+
+# Download iOS.zip file
+if [ $# -eq 1 ] && [ $1 = 'download' ]; then
+    echo 'download...'
+    curl --silent -O http://ioszip.mashroom.in/package/iOS.zip
+    echo 'done!'
+    echo 'Please check iOS.zip file.'
+    open 'http://ioszip.mashroom.in/?referrer=cui_command' # for measurement of effectiveness
+    exit 0 #Success!
+fi
+
+# Unknown command!!
+echo "It's unknown command..."
+echo 'Please type "ioszip --help".'
+exit 1 #Failure!
