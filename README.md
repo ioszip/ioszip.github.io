@@ -15,23 +15,21 @@ $ brew tap ioszip/ioszip
 $ brew install ioszip
 ```
 
+So, You can use `ioszip` command.
+
 
 ### Usage
 
-The download iOS.zip command is below.
 
 ```bash
 $ ioszip download
 ```
 
-
-So, You can use `ioszip` command.
+### Help
 
 ```
 $ ioszip --help
-```
 
-```bash
 ioszip [COMMAND]
 
 COMMAND:
@@ -39,3 +37,4 @@ COMMAND:
     opengit         open ioszip github #ioszip is a open source tool!
     download        download zip file
 ```
+
